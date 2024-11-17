@@ -12,21 +12,31 @@
 <img class="display-image m-auto" src="./Css-Javascript/ThanhDieu-Template.png" >
 <body>
 
-
 <h2 class="page-title page-text-color page-text-font mt-16 text-center">Thái Huy Tuấn Anh <img src="https://tanamedia.vn/wp-content/uploads/2021/09/unnamed-1.png"  width="17" height="17" alpha="_ThanhDieu_"></h2>
 <div class="page-bioline text-fs-16 page-text-color page-text-font mt-8 ln-h-22 text-center">I Love You 3000</div>
+
+<!-- Mục đếm ngày yêu -->
+<div class="mt-16">
+<p class="text-center" id="love-countdown" style="font-size: 24px; color: #ff6347;">Ngày yêu nhau: 0 ngày</p>
+</div>
+
+
 <div class="flex-both-center flex-wrap mt-16">
-	<audio id="myAudio">
-  <source src="music.ogg" type="audio/ogg">
-  <source src="music.mp3" type="audio/mpeg">
+<audio id="myAudio">
+<source src="music.ogg" type="audio/ogg">
+<source src="music.mp3" type="audio/mpeg">
 </audio>
 <button class="glow-on-hover" onclick="playAudio()" type="button">Play Music </button>&nbsp;&nbsp;
 <button class="glow-on-hover" onclick="pauseAudio()" type="button">Stop Music</button> 
 </div>
+
+<div class="mt-32">
+<button onclick="changeBackgroundColor()" class="glow-on-hover">Change to Pink</button>
+</div>
+
+
 <div class="mt-32">
 <div class="page-item-wrap relative">
-<div class="page-item flex-both-center relative"></div>
-<a rel="noopener nofollow" class="page-item-each flex-both-center" href="https://t.me/Zerus2g" target="_blank">Telegram</a>
 </div>
 <div class="text-center">
 <br>
@@ -36,6 +46,15 @@
 </div>
 </div>
 <script>
+//dem ngay
+var startDate = new Date("2024-04-11"); // Ngày bắt đầu mối quan hệ, chỉnh sửa ngày này theo nhu cầu của bạn
+var currentDate = new Date();
+var timeDiff = currentDate - startDate; // Tính toán chênh lệch thời gian
+var daysSinceStart = Math.floor(timeDiff / (1000 * 3600 * 24)); // Chuyển đổi chênh lệch thời gian thành số ngày
+
+// Hiển thị số ngày yêu
+document.getElementById("love-countdown").innerText = "Ngày yêu nhau: " + daysSinceStart + " ngày";
+
 var x = document.getElementById("myAudio"); 
 
 function playAudio() { 
@@ -44,7 +63,15 @@ function playAudio() {
 
 function pauseAudio() { 
   x.pause(); 
-} 
+}
+
+
+function changeBackgroundColor() {
+document.body.style.backgroundColor = "pink";
+document.getElementById("background_div").style.backgroundColor = "pink";
+}
+
+
 </script>
 <script type="text/javascript" src="./Css-Javascript/p.js"></script>
 </body><div class="troywell-avia"></div><div class="troywell-caa"></div></html>
